@@ -4,11 +4,15 @@
 }
 
 .roboto-font {
-    font-family: "Roboto", sans-serif ;
+    font-family: "Roboto", sans-serif;
 }
 
 .pastel-blue-text {
     color: #2B4074;
+}
+
+.brown-color {
+    color: #4A4A4A;
 }
 
 /* main styles */
@@ -24,6 +28,16 @@ header {
     height: 100px;
     width: 100%;
     position: relative;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 3.8vw;
+}
+
+.container-md {
+    height: 580px;
+    width: auto;
 }
 
 .emblem {
@@ -75,7 +89,7 @@ header {
     z-index: 1; /* Ensures it is behind the content */
 }
 
-.preview > h1 {
+.preview h1 {
     color: white;
     font-weight: normal;
     z-index: 2;
@@ -85,7 +99,7 @@ header {
 
 h1 span {
     display: block; /* Each word takes full width of its line */
-    font-size: 6vw; /* Example font size */
+    font-size: 6vw;
     color: white; /* Adjust based on your design */
 }
 
@@ -97,14 +111,14 @@ h1 span {
     max-width: 60%;
 }
 
-.preview .details {
+.details {
     background: #2B4074;
     cursor: pointer;
     border-radius: 5px; /* Optional: Adds rounded corners */
     color: white;
     width: 200px;
     height: 50px;
-    font-size: 1.25vw;
+    font-size: 1vw;
 
     z-index: 2;
 }
@@ -129,8 +143,6 @@ h1 span {
     height: 56px;
     border: none;
     color: white;
-    padding: 10px 15px;
-    font-size: 1.5rem;
     cursor: pointer;
 
     background-position: center; /* Центрируем изображение */
@@ -189,13 +201,14 @@ h1 span {
 
 .call-us div h3 {
     font-weight: normal;
-    font-size: 2rem;
+    /*font-size: 2rem;*/
+    font-size: 1.5vw;
 }
 
 .call-us div p {
     font-family: "Dosis", sans-serif;
     font-weight: 100;
-    font-size: 1.2rem;
+    font-size: 1vw;
 }
 
 .call-us-btn {
@@ -205,18 +218,17 @@ h1 span {
 }
 
 .service {
-    height: 550px;
     background-color: white;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 62px;
-    padding-top: 90px;
 }
 
-.service .service-description {
+.service-description {
+    padding-left: 62px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,21 +237,229 @@ h1 span {
     max-width: 35%;
 }
 
-.service .service-description h2{
-    font-weight: normal;
-    font-size: 4rem;
+.main-description {
+    font-size: 1.8vw;
 }
 
-.service .service-description .main-description {
-    font-size: 2rem;
+.line-img {
+    width: 120px;
 }
 
-.service .service-description img {
-    width: 100px;
+.centered-line {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.service .service-description .service-sub-description {
+.service-sub-description {
     color: #797979;
-    font-size: 1rem;
+    font-size: 1vw;
     max-width: 400px;
+
+    padding-top: 15px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 карточки в строке */
+    grid-template-rows: repeat(auto-fill, 1fr); /* Равномерное распределение строк */
+    flex-grow: 1; /* Контейнер карточек займёт оставшееся пространство */
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Центрирование текста внутри блока */
+    border: #F9F6E5 solid 1px;
+
+    position: relative;
+}
+
+.card-text {
+    text-transform: uppercase;
+}
+
+.card-hidden {
+    display: none;
+    color: #9B9B9B;
+
+    position: absolute; /* Абсолютное позиционирование текста */
+    bottom: 10px; /* Появляется внизу карточки (или по другому желаемому месту) */
+}
+
+.card:hover {
+    cursor: pointer;
+    border: #2B4074 solid 4px;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.card:hover .card-hidden {
+    display: block;
+}
+
+.card-image {
+    filter: sepia(1) saturate(10000%) hue-rotate(220deg) brightness(0.5);
+}
+
+.projects {
+    background: linear-gradient(to bottom, #2B4074, rgba(243, 239, 239, 0.94)); /* Сине-белый градиент сверху вниз */
+}
+
+.projects h2 {
+    color: white;
+
+    text-align: center;
+}
+
+.project-cards {
+    margin: 100px 200px;
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.project-image-wrapper {
+    position: relative;
+}
+
+.project-hover {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%; /* Размер жёлтого фона меньше, чем у изображения */
+    height: 90%; /* Высота жёлтого фона меньше, чем у изображения */
+
+    background-image: url("/images/info-bg.png");
+    border-radius: 10px; /* Если нужно, добавляем скругление */
+
+    transform: translate(-50%, -50%); /* Центрируем фон по изображению */
+    opacity: 0; /* Изначально скрыт */
+    transition: opacity 0.3s ease; /* Плавное появление фона */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-btn {
+    width: 37px; /* Задаём размеры кнопок */
+    height: 37px;
+    background-size: contain; /* Фон будет полностью видим */
+    background-repeat: no-repeat;
+    margin: 10px;
+    display: block;
+    cursor: pointer; /* Курсор как у кнопки */
+}
+
+.search {
+    background-image: url("/images/search-button.png");
+}
+
+.info {
+    background-image: url("/images/info-button.png");
+}
+
+.project-hover:hover {
+    opacity: 1;
+}
+
+.team {
+    background-color: white;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 10%;
+    padding-left: 15%;
+    padding-top: 5%;
+}
+
+.team > img {
+    border-radius: 5px;
+}
+
+.team-description {
+    max-width: 40%;
+    color: #9B9B9B;
+    font-size: 1.2vw;
+}
+
+.team-description h2 {
+    margin: 0 0 15px 0;
+}
+
+.team-description p {
+    margin: 7% 0;
+}
+
+.team-description button {
+    margin-top: auto;
+}
+
+.last-news {
+    height: 1050px;
+    width: auto;
+    background-color: #F9F6E5;
+}
+
+.last-news h2 {
+    margin: 0;
+    padding: 3% 0 1% 0;
+    text-align: center;
+}
+
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    justify-content: space-around;
+
+    margin: 80px 250px 0 250px;
+    gap: 15px;
+}
+
+.news-card {
+    display: block;
+}
+
+.news-card div {
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column; /* Размещает элементы в колонку, чтобы <img> и <p> шли один под другим */
+    align-items: flex-start; /* Выравнивает элементы по левому краю */
+}
+
+.news-card div > img {
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0;
+}
+
+.news-card p {
+    margin: 0;
+    padding: 10px 0 0 10px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.test {
+    height: 300px;
+    width: auto;
+}
+.test2 {
+    height: 400px;
+    width: auto;
 }
