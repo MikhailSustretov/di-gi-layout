@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 /* frequently repeated values */
 .roboto-condensed-font {
     font-family: "Roboto Condensed", sans-serif;
@@ -11,8 +13,16 @@
     color: #2B4074;
 }
 
+.blue-background {
+    background-color: #2B4074;
+}
+
 .brown-color {
     color: #4A4A4A;
+}
+
+.rounded-border {
+    border-radius: 5px;
 }
 
 /* main styles */
@@ -40,7 +50,12 @@ h2 {
     width: auto;
 }
 
-.emblem {
+.container {
+    padding: 0 150px;
+    height: 100%;
+}
+
+.top-emblem {
     position: absolute;
     top: 17px;
     left: 11%;
@@ -54,7 +69,7 @@ h2 {
     right: 9%;
     top: 30px;
     cursor: pointer;
-    background-image: url("/images/menu-button.png");
+    background-image: url("/images/menu-button.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -112,9 +127,7 @@ h1 span {
 }
 
 .details {
-    background: #2B4074;
     cursor: pointer;
-    border-radius: 5px; /* Optional: Adds rounded corners */
     color: white;
     width: 200px;
     height: 50px;
@@ -150,9 +163,7 @@ h1 span {
     background-size: 30%; /* Масштабируем изображение внутри кнопки */
 }
 
-.arrows .left-arrow {
-    background-color: #2B4074; /* Цвет левой кнопки */
-
+.left-arrow {
     background-image: url("/images/left.png"); /* Путь к изображению стрелки */
 }
 
@@ -174,14 +185,24 @@ h1 span {
     width: 15px;
     height: 15px;
     border-radius: 50%; /* Делаем кнопки круглыми */
-    background-color: rgba(0, 0, 0, 100); /* Прозрачный цвет для неактивных кнопок */
-    border: 1px solid white; /* Белый бордер */
     margin: 0 5px; /* Пространство между кнопками */
     cursor: pointer;
 }
 
-.dot.active {
+.border-blue {
+    border: 1px solid #2B4074;
+}
+
+.border-white {
+    border: 1px solid white;
+}
+
+.active-white {
     background-color: white;
+}
+
+.background-transparent {
+    background-color: transparent;
 }
 
 .call-us {
@@ -215,6 +236,7 @@ h1 span {
     width: 200px;
     height: 50px;
     cursor: pointer;
+    font-size: 1.3rem;
 }
 
 .service {
@@ -302,7 +324,7 @@ h1 span {
 }
 
 .card-image {
-    filter: sepia(1) saturate(10000%) hue-rotate(220deg) brightness(0.5);
+    /*filter: sepia(1) saturate(10000%) hue-rotate(220deg) brightness(0.5);*/
 }
 
 .projects {
@@ -316,10 +338,10 @@ h1 span {
 }
 
 .project-cards {
-    margin: 100px 200px;
+    margin: 100px 0;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
 }
 
@@ -369,19 +391,17 @@ h1 span {
     opacity: 1;
 }
 
-.team {
+.team-section {
     background-color: white;
+}
 
+.team {
     display: flex;
     justify-content: flex-start;
     align-items: start;
     gap: 10%;
-    padding-left: 15%;
     padding-top: 5%;
-}
-
-.team > img {
-    border-radius: 5px;
+    padding-bottom: 5%;
 }
 
 .team-description {
@@ -415,51 +435,255 @@ h1 span {
 }
 
 .news-cards {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-
-    justify-content: space-around;
-
-    margin: 80px 250px 0 250px;
-    gap: 15px;
+    columns: 270px;
+    height: 100%;
 }
 
-.news-card {
-    display: block;
-}
-
-.news-card div {
+.inner-news-card {
+    position: relative;
     margin-bottom: 30px;
-
-    display: flex;
-    flex-direction: column; /* Размещает элементы в колонку, чтобы <img> и <p> шли один под другим */
-    align-items: flex-start; /* Выравнивает элементы по левому краю */
+    width: 270px;
+    z-index: 2;
 }
 
-.news-card div > img {
+.inner-news-card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0; /* Расположение сверху */
+    left: 0; /* Выровнять по левому краю */
+    right: 0;
+    bottom: 0;
+    border: 10px solid #2B4074; /* Рамка со всех сторон */
+    z-index: 3; /* Разместить псевдоэлемент поверх содержимого */
+}
+
+.inner-news-card img {
     display: block;
-    border-radius: 5px;
     width: 100%;
-    margin: 0;
+    height: auto;
 }
 
-.news-card p {
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Прозрачный изначально */
+    transition: background-color 0.3s ease; /* Плавное появление затемнения */
+    z-index: 1; /* Позволяет затемнению находиться над контентом */
+}
+
+.inner-news-card:hover .card-overlay {
+    background-color: rgba(0, 0, 0, 0.1); /* Полупрозрачное затемнение */
+}
+
+/* Кнопка "Инфо" */
+.info-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Без границы */
+    background-image: url("/images/white-info-button.png");
+    cursor: pointer;
+    opacity: 0; /* Скрыта изначально */
+    transition: opacity 0.3s ease; /* Плавное появление кнопки */
+    z-index: 2; /* Поверх затемнения */
+}
+.inner-news-card:hover .info-button {
+    opacity: 1; /* Появление кнопки */
+}
+
+.inner-news-card p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+
     margin: 0;
     padding: 10px 0 0 10px;
-    height: 40px;
-    width: 100%;
+
     box-sizing: border-box;
-    background-color: #FFFFFF;
     font-weight: 500;
     letter-spacing: 2px;
+
+    z-index: 1;
 }
 
-.test {
+.hardcoded-height {
     height: 300px;
     width: auto;
 }
-.test2 {
+.hardcoded-height2 {
     height: 400px;
     width: auto;
+}
+
+.quote {
+    height: 500px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-top: 100px;
+}
+
+.quote-text {
+    text-align: center;
+    max-width: 60%;
+    font-size: 2.5vw;
+}
+
+.quote-source {
+    font-style: normal;
+    font-size: 1.5vw;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.quote div {
+    margin-top: 100px;
+}
+
+footer {
+    height: 630px;
+    width: auto;
+
+    position: relative;
+}
+
+.bot-emblem {
+    position: absolute;
+    width: 230px;
+    height: 60px;
+    background-color: #2B4074;
+
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); /* Центрируем фон по изображению */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    letter-spacing: 2px;
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+    gap: 100px;
+}
+
+.footer-content > p {
+    color: white;
+    font-size: 1.8vw;
+    font-weight: 300;
+
+    max-width: 50%;
+}
+
+.networks-btns {
+    height: 63px;
+
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.networks-btn {
+    flex: 1;
+    cursor: pointer;
+
+    background: none no-repeat center;
+    border: 1px solid #7EBF84;
+}
+
+.middle-networks-btn {
+    border-left: none;
+}
+
+.right-btn-border {
+    border-right: none;
+}
+
+.facebook {
+    background-image: url("/images/networks-buttons/facebook.png");
+}
+
+.google {
+    background-image: url("/images/networks-buttons/google.png");
+}
+
+.twitter {
+    background-image: url("/images/networks-buttons/twitter.png");
+}
+
+.pinterest {
+    background-image: url("/images/networks-buttons/pinterest.png");
+}
+
+.footer-navigation {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-nav-flex-column {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.footer-nav-flex-column h4 {
+    letter-spacing: 5px;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.footer-navigation p, a {
+    margin-bottom: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.up {
+    position: absolute;
+
+    height: 42px;
+    width: 100vw;
+    background-color: #F9F6E5;
+}
+
+.up-block {
+    height: 100%;
+    margin-right: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.up-block button {
+
+    cursor: pointer;
+
+    background: url("/images/up.png") no-repeat center;
+    border: none;
+    width: 30px;
 }
