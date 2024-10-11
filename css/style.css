@@ -1,4 +1,5 @@
 @import "normalize.css";
+@import "responsive.css";
 
 :root {
     --roboto-condensed-font: "Roboto Condensed", sans-serif;
@@ -23,7 +24,7 @@ html, body {
 
 h2 {
     font-weight: normal;
-    font-size: 3.8rem;
+    font-size: 48px;
 }
 
 h3 {
@@ -41,8 +42,15 @@ hr {
 }
 
 .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container--padding {
     padding: 0 150px;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .centered-line {
@@ -55,13 +63,12 @@ hr {
 header {
     height: 100px;
     width: 100%;
-    position: relative;
 }
 
 .top-emblem {
     position: absolute;
     top: 17px;
-    left: 11%;
+    left: 153px;
     max-width: 100px;
 }
 
@@ -69,7 +76,7 @@ header {
     position: absolute;
     height: 40px;
     width: 40px;
-    right: 9%;
+    right: 135px;
     top: 30px;
     cursor: pointer;
     background-image: url("/images/menu-button.svg");
@@ -81,6 +88,7 @@ header {
 
 .preview {
     height: 100%;
+    max-height: 668px;
     width: auto;
     background-image: url("/images/bg-img.jpg");
     background-size: cover;
@@ -88,17 +96,6 @@ header {
     background-repeat: no-repeat;
 
     position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    text-align: center;
-    padding-top: 4%;
-    font-family: var(--roboto-condensed-font);
-
-    z-index: 1;
 }
 
 .preview::before {
@@ -111,20 +108,44 @@ header {
 
     background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
 
-    z-index: -1;
+    z-index: 1;
 }
 
-.preview h1 {
+.preview--flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+    font-family: var(--roboto-condensed-font);
+    z-index: 2;
+
+    height: 100%;
+}
+
+.preview--flexbox h1 {
     color: white;
     font-weight: normal;
     font-size: 6rem;
     max-width: 40%;
+    margin: 0;
 }
 
-.preview p {
+.preview--paragraph {
     color: white;
-    font-size: 1.8rem;
+    font-size: 24px;
     max-width: 60%;
+}
+
+.preview--line {
+    background-color: var(--brown-color);
+    width: 61px;
+    height: 8px;
+    margin: 24px;
+    display: none;
 }
 
 .details {
@@ -134,13 +155,13 @@ header {
     color: white;
     width: 200px;
     height: 50px;
-    font-size: 1.3rem;
+    font-size: 18px;
     font-weight: 300;
 }
 
 .pagination-dots {
     margin-top: auto;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 
     z-index: 2;
 }
@@ -179,8 +200,8 @@ header {
 }
 
 .arrow {
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
     border: none;
     cursor: pointer;
 
@@ -201,52 +222,59 @@ header {
 .call-us {
     height: 190px;
 
+    color: white;
+    font-family: var(--roboto-condensed-font);
+}
+
+.call-us--flexbox {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
-    color: white;
-    font-family: var(--roboto-condensed-font);
+    height: 100%;
 }
 
-.call-us div {
-    width: 500px;
+.call-us-text {
+    width: 30%;
 }
 
 .call-us p {
     font-family: "Dosis", sans-serif;
     font-weight: 100;
-    font-size: 1rem;
 }
 
 .call-us-btn {
     width: 200px;
     height: 50px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 18px;
 
     color: var(--main-color)
 }
 
 .service {
-    height: 580px;
+    height: 546px;
 
     background-color: white;
     font-family: var(--roboto-condensed-font);
+}
 
+.service--flexbox {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+
+    height: 100%;
 }
 
 .service-description {
-    padding-left: 62px;
-    padding-top: 30px;
+    padding: 30px 62px;
     display: flex;
     flex-direction: column;
-
     width: 35%;
+
+    box-sizing: border-box;
 }
 
 .service-description h2 {
@@ -254,7 +282,7 @@ header {
 }
 
 .main-description {
-    font-size: 1.7rem;
+    font-size: 24px;
     color: var(--brown-color);
     font-family: var(--roboto-font);
 }
@@ -262,7 +290,7 @@ header {
 .service-sub-description {
     color: #797979;
     font-family: var(--roboto-font);
-    font-size: 1.2rem;
+    font-size: 18px;
     width: 70%;
 
     padding-top: 15px;
@@ -336,8 +364,9 @@ header {
 }
 
 .projects {
-    background: linear-gradient(to bottom, var(--main-color), rgba(243, 239, 239, 0.94));
+    height: 618px;
 
+    background: linear-gradient(to bottom, var(--main-color), rgba(243, 239, 239, 0.94));
     font-family: var(--roboto-condensed-font);
 }
 
@@ -354,18 +383,26 @@ header {
 .flex-projects h2 {
     color: white;
     text-transform: capitalize;
+    margin-top: 80px;
 }
 
 .project-cards {
-    padding: 100px 0;
+    padding: 84px 0;
 
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     text-align: center;
     color: var(--main-color);
     font-family: var(--roboto-condensed-font);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.project-card {
+    margin-bottom: 20px;
 }
 
 .project-image-wrapper {
@@ -426,24 +463,27 @@ header {
     display: flex;
     align-items: start;
     gap: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 80px 0;
+
+    box-sizing: border-box;
 }
 
 .team-description {
     max-width: 40%;
     color: #9B9B9B;
-    font-size: 1.2rem;
 }
 
 .team-description h2 {
     margin: 0 0 15px 0;
+    font-size: 48px;
 
     font-family: var(--roboto-condensed-font);
     color: var(--brown-color);
 }
 
 .team-description p {
+    line-height: 24px;
+    font-size: 18px;
     padding: 7% 0;
 
     font-family: var(--roboto-font);
@@ -451,6 +491,7 @@ header {
 
 .team-description button {
     margin-top: auto;
+    font-weight: 400;
 }
 
 .last-news {
@@ -566,20 +607,24 @@ header {
     height: 500px;
     background-color: white;
 
+    font-family: var(--roboto-condensed-font);
+    color: var(--brown-color);
+}
+
+.quote--flexbox {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     padding-top: 100px;
-
-    font-family: var(--roboto-condensed-font);
-    color: var(--brown-color);
+    box-sizing: border-box;
+    height: 100%;
 }
 
 .quote-text {
     text-align: center;
     max-width: 60%;
-    font-size: 2.5vw;
+    font-size: 36px;
 }
 
 .quote-text span {
@@ -588,11 +633,9 @@ header {
 
 .quote-source {
     font-style: normal;
-    font-size: 1.5vw;
+    font-size: 24px;
     letter-spacing: 2px;
-    font-weight: 500;
-
-    margin-bottom: 100px;
+    font-weight: 600;
 }
 
 footer {
@@ -610,7 +653,7 @@ footer {
     transform: translate(-50%, -50%); /* Центрируем фон по изображению */
 }
 
-.footer-content {
+.footer--flexbox {
     display: flex;
     flex-direction: column;
 
@@ -620,9 +663,9 @@ footer {
     gap: 100px;
 }
 
-.footer-content > p {
+.footer--flexbox > p {
     color: white;
-    font-size: 1.8vw;
+    font-size: 24px;
     font-weight: 300;
 
     width: 50%;
@@ -687,13 +730,15 @@ footer {
 
 .footer-nav-flex-column h4 {
     letter-spacing: 5px;
-    font-size: 1.2vw;
+    font-size: 16px;
     font-weight: 500;
 
     font-family: var(--roboto-condensed-font);
 }
 
 .footer-navigation p, a {
+    font-size: 20px;
+    font-weight: 300;
     color: inherit;
     text-decoration: none;
     margin-top: 0;

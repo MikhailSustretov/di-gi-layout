@@ -1,0 +1,144 @@
+/* DESKTOP */
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        width: 1024px;
+    }
+
+    .container--padding {
+        padding: 0 40px;
+    }
+
+    .top-emblem {
+        left: 46px;
+    }
+
+    .menu-button {
+        right: 42px;
+    }
+
+    .preview {
+        height: 618px;
+    }
+
+    .preview--paragraph {
+        font-size: 18px;
+    }
+
+    .arrow {
+        width: 56px;
+        height: 56px;
+    }
+
+    .call-us {
+        height: 160px;
+    }
+
+    .call-us--flexbox {
+        justify-content: space-between;
+        padding: 0 46px;
+
+        box-sizing: border-box;
+    }
+
+    .call-us-text {
+        width: 45%;
+    }
+
+    .service {
+        height: 912px;
+    }
+
+    .service--flexbox {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .service-description  {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .service-description h2 {
+        margin: 52px auto;
+    }
+
+    .service-cards {
+        width: 100%;
+    }
+
+    .projects {
+        height: 1033px;
+    }
+
+    .project-cards {
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .project-image {
+        width: 318px;
+    }
+
+    .last-news {
+        height: 1370px;
+    }
+
+    .quote-text {
+        font-size: 32px;
+        max-width: 75%;
+    }
+
+    .quote-source {
+        font-size: 20px;
+    }
+
+    .footer--flexbox > p {
+        font-size: 36px;
+        width: 80%;
+    }
+
+    .footer-nav-flex-column h4 {
+        font-size: 18px;
+    }
+
+    .footer-navigation p, a {
+        font-size: 16px;
+    }
+}
+
+/* TABLET PORTRAIT */
+@media (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+/* PORTRAIT */
+@media (max-width: 640px) {
+    .preview--paragraph {
+        display: none;
+    }
+
+    .preview--line {
+        display: block;
+    }
+}
+
+/* MOBILE PORTRAIT */
+@media (max-width: 320px) {
+    html {
+        font-size: 5px;
+    }
+
+    .details {
+        display: none;
+    }
+}

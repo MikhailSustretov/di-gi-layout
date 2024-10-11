@@ -7,138 +7,148 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Dosis:wght@200..800&display=swap"
           rel="stylesheet">
 </head>
 <body>
 <div id="top"></div>
 <header>
-    <a href="#"><img class="top-emblem" src="/images/emblem.svg" alt="emblem"/></a>
-    <button class="menu-button"></button>
+    <div class="container">
+        <a href="#"><img class="top-emblem" src="/images/emblem.svg" alt="emblem"/></a>
+        <button class="menu-button"></button>
+    </div>
 </header>
 <section class="preview" id="preview">
-    <h1>МИСЛИ ГЛОБАЛЬНО</h1>
-    <p>Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших
-        клієнтів в
-        маркетингу,
-        продажах та управлінні</p>
-    <button class="details rounded-border">ДЕТАЛЬНІШЕ</button>
-    <div class="arrows">
-        <button class="arrow left-arrow"></button>
-        <button class="arrow right-arrow"></button>
-    </div>
-    <div class="pagination-dots">
-        <button class="pagination-dot top-pagination-dot"></button>
-        <button class="pagination-dot top-pagination-dot active-transparent"></button>
-        <button class="pagination-dot top-pagination-dot"></button>
+    <div class="container preview--flexbox">
+        <h1>МИСЛИ ГЛОБАЛЬНО</h1>
+        <p class="preview--paragraph">Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших
+            клієнтів в
+            маркетингу,
+            продажах та управлінні</p>
+        <hr class="preview--line"/>
+        <button class="details rounded-border">ДЕТАЛЬНІШЕ</button>
+        <div class="arrows">
+            <button class="arrow left-arrow"></button>
+            <button class="arrow right-arrow"></button>
+        </div>
+        <div class="pagination-dots">
+            <button class="pagination-dot top-pagination-dot"></button>
+            <button class="pagination-dot top-pagination-dot active-transparent"></button>
+            <button class="pagination-dot top-pagination-dot"></button>
+        </div>
     </div>
 </section>
 <section class="call-us" id="call-us">
-    <div>
-        <h3>Ви полюбите нас з першої зустрічі!</h3>
-        <p>Ми надаємо комплексний підхід до просування компанії,
-            продуктів та послуг в цифровій сфері.</p>
+    <div class="container call-us--flexbox">
+        <div class="call-us-text">
+            <h3>Ви полюбите нас з першої зустрічі!</h3>
+            <p>Ми надаємо комплексний підхід до просування компанії,
+                продуктів та послуг в цифровій сфері.</p>
+        </div>
+        <button class="call-us-btn">ПЕРЕДЗВОНІТЬ МЕНІ</button>
     </div>
-    <button class="call-us-btn">ПЕРЕДЗВОНІТЬ МЕНІ</button>
 </section>
 <section class="service">
-    <div class="service-description">
-        <h2>Сервіс</h2>
-        <p class="main-description">Від ідеї до незабутнього та вимірюваного результату</p>
-        <hr>
-        <p class="service-sub-description">Інтеграція бездоганного виробництва, передових технологій та
-            ретельного вимірювання продуктивності</p>
-    </div>
-    <div class="service-cards">
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/strategy.png" alt="strategy">
-                <p class="service-card-title">Стратегія</p>
-            </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
-            </div>
+    <div class="container service--flexbox">
+        <div class="service-description">
+            <h2>Сервіс</h2>
+            <p class="main-description">Від ідеї до незабутнього та вимірюваного результату</p>
+            <hr>
+            <p class="service-sub-description">Інтеграція бездоганного виробництва, передових технологій та
+                ретельного вимірювання продуктивності</p>
         </div>
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/analyse.png" alt="analyse">
-                <p class="service-card-title">Аналіз</p>
+        <div class="service-cards">
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/strategy.png" alt="strategy">
+                    <p class="service-card-title">Стратегія</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/analyse.png" alt="analyse">
+                    <p class="service-card-title">Аналіз</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
-        </div>
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/social-networks.png" alt="social-networks">
-                <p class="service-card-title">Соц мережі</p>
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/social-networks.png" alt="social-networks">
+                    <p class="service-card-title">Соц мережі</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/development.png" alt="development">
+                    <p class="service-card-title">Розвиток</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
-        </div>
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/development.png" alt="development">
-                <p class="service-card-title">Розвиток</p>
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/content.png" alt="content">
+                    <p class="service-card-title">Контент</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/UX-design.png" alt="UX-design">
+                    <p class="service-card-title">Дизайн UX</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
-        </div>
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/content.png" alt="content">
-                <p class="service-card-title">Контент</p>
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/target-ad.png" alt="target-ad">
+                    <p class="service-card-title">Таргетована реклама</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
-            </div>
-        </div>
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/UX-design.png" alt="UX-design">
-                <p class="service-card-title">Дизайн UX</p>
-            </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
-            </div>
-        </div>
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/target-ad.png" alt="target-ad">
-                <p class="service-card-title">Таргетована реклама</p>
-            </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
-            </div>
-        </div>
-        <div class="service-card">
-            <div class="service-card-visible">
-                <img src="/images/services-cards-images/product.png" alt="product">
-                <p class="service-card-title">Продукт</p>
-            </div>
-            <div class="service-card-hidden">
-                <p>Створимо унікальний та зручний дизайн</p>
-                <a>ДЕТАЛЬНІШЕ →</a>
+            <div class="service-card">
+                <div class="service-card-visible">
+                    <img src="/images/services-cards-images/product.png" alt="product">
+                    <p class="service-card-title">Продукт</p>
+                </div>
+                <div class="service-card-hidden">
+                    <p>Створимо унікальний та зручний дизайн</p>
+                    <a>ДЕТАЛЬНІШЕ →</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <section class="projects" id="projects">
-    <div class="container">
+    <div class="container container--padding">
         <div class="flex-projects">
             <h2>наші проєкти</h2>
             <hr>
             <div class="project-cards">
-                <div>
+                <div class="project-card">
                     <div class="project-image-wrapper">
                         <img class="project-image rounded-border" src="images/project-cards-images/lalique.png"
                              alt="lalique">
@@ -149,7 +159,7 @@
                     </div>
                     <p>Lalique бутик</p>
                 </div>
-                <div>
+                <div class="project-card">
                     <div class="project-image-wrapper">
                         <img class="project-image rounded-border" src="images/project-cards-images/building.png"
                              alt="building">
@@ -160,7 +170,7 @@
                     </div>
                     <p>Будівництво домів</p>
                 </div>
-                <div>
+                <div class="project-card">
                     <div class="project-image-wrapper">
                         <img class="project-image rounded-border" src="images/project-cards-images/coffe-shop.png"
                              alt="mask.png">
@@ -171,7 +181,7 @@
                     </div>
                     <p>Кавʼярня</p>
                 </div>
-                <div>
+                <div class="project-card">
                     <div class="project-image-wrapper">
                         <img class="project-image rounded-border" src="images/project-cards-images/unique-tours.png"
                              alt="unique-tours">
@@ -187,24 +197,28 @@
     </div>
 </section>
 <section class="team-section" id="team">
-    <div class="container team">
-        <img class="rounded-border" src="/images/team.png" alt="team">
-        <div class="team-description">
-            <h2>Команда</h2>
-            <hr>
-            <p>Наша команда — це наша найбільша цінність.
-                Ми наполегливо працювали, щоб створити групу експертів,
-                чиї навички доповнюють один одного.
-                У членів нашої команди різні історії, але ми розділяємо загальну пристрасть до ідеалу. Ми віримо, щоб
-                залишатись професіоналом, потрібно розвиватись, тому ми постійно шукаємо способи, як стати краще в тому,
-                що
-                ми робимо.</p>
-            <button class="details">ДИВИТИСЬ ВІДЕО</button>
+    <div class="container container--padding">
+        <div class="team">
+            <img class="rounded-border" src="/images/team.png" alt="team">
+            <div class="team-description">
+                <h2>Команда</h2>
+                <hr>
+                <p>Наша команда — це наша найбільша цінність.
+                    Ми наполегливо працювали, щоб створити групу експертів,
+                    чиї навички доповнюють один одного.
+                    У членів нашої команди різні історії, але ми розділяємо загальну пристрасть до ідеалу. Ми віримо,
+                    щоб
+                    залишатись професіоналом, потрібно розвиватись, тому ми постійно шукаємо способи, як стати краще в
+                    тому,
+                    що
+                    ми робимо.</p>
+                <button class="details">ДИВИТИСЬ ВІДЕО</button>
+            </div>
         </div>
     </div>
 </section>
 <section class="last-news" id="blog">
-    <div class="container">
+    <div class="container container--padding">
         <h2>Останні Новини</h2>
         <hr class="centered-line">
         <div class="news-cards">
@@ -263,24 +277,26 @@
     </div>
 </section>
 <section class="quote">
-    <img src="/images/quote-symbol.png" alt="quote-symbol">
-    <blockquote class="quote-text">
-        Якщо треба створити або підняти імідж компанії,
-        то <span>діджитал-маркетинг</span> є найбільш влучним
-    </blockquote>
-    <cite class="quote-source">- Маргарита Акулич</cite>
-    <div class="pagination-dots">
-        <button class="pagination-dot bottom-pagination-dot"></button>
-        <button class="pagination-dot bottom-pagination-dot active-transparent"></button>
-        <button class="pagination-dot bottom-pagination-dot"></button>
+    <div class="container quote--flexbox">
+        <img src="/images/quote-symbol.png" alt="quote-symbol">
+        <blockquote class="quote-text">
+            Якщо треба створити або підняти імідж компанії,
+            то <span>діджитал-маркетинг</span> є найбільш влучним
+        </blockquote>
+        <cite class="quote-source">- Маргарита Акулич</cite>
+        <div class="pagination-dots">
+            <button class="pagination-dot bottom-pagination-dot"></button>
+            <button class="pagination-dot bottom-pagination-dot active-transparent"></button>
+            <button class="pagination-dot bottom-pagination-dot"></button>
+        </div>
     </div>
 </section>
 <footer>
-    <div class="container">
+    <div class="container container--padding">
         <div class="bot-emblem rounded-border">
             <img src="/images/emblem.svg" alt="emblem"/>
         </div>
-        <div class="footer-content">
+        <div class="footer--flexbox">
             <p>
                 Ми хотіли б почути все про ваш проєкт.
                 Звʼяжіться з нами!
@@ -318,9 +334,11 @@
         </div>
     </div>
     <div class="up">
-        <div class="up-block">
-            <p>НАГОРУ</p>
-            <a href="#top"></a>
+        <div class="container">
+            <div class="up-block">
+                <p>НАГОРУ</p>
+                <a href="#top"></a>
+            </div>
         </div>
     </div>
 </footer>
