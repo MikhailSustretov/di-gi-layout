@@ -5,11 +5,11 @@
     }
 
     h3 {
-        font-size: 1.3rem;
+        font-size: 18px;
     }
 
     .container {
-        width: 1024px;
+        max-width: 1024px;
     }
 
     .container--padding {
@@ -83,12 +83,22 @@
         gap: 50px;
     }
 
-    .project-image {
-        width: 318px;
+    .project-image-wrapper {
+        width: 40vw;
+        max-width: 318px;
+    }
+
+    .team-image {
+        width: 40vw;
+        height: auto;
     }
 
     .last-news {
         height: 1370px;
+    }
+
+    .inner-news-card {
+        font-size: 18px;
     }
 
     .quote-text {
@@ -109,7 +119,8 @@
         font-size: 18px;
     }
 
-    .footer-navigation p, a {
+    .footer-navigation p,
+    .footer-link {
         font-size: 16px;
     }
 }
@@ -119,10 +130,140 @@
     html {
         font-size: 10px;
     }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+
+    .preview {
+        height: 465px;
+    }
+
+    .preview--paragraph {
+        max-width: 80%;
+    }
+
+    .call-us {
+        height: 190px;
+    }
+
+    .call-us-text {
+        width: 70%;
+    }
+
+    .call-us-text p {
+        font-size: 16px;
+    }
+
+    .service {
+        height: 1655px;
+    }
+
+    .service-description h2 {
+        margin: 0 auto;
+    }
+
+    .service-sub-description {
+        text-align: center;
+        width: 100%;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card-hidden {
+        bottom: 50px;
+        width: 60%;
+    }
+
+    .service-card-hidden p {
+        margin: 16px auto;
+    }
+
+    .team-description {
+        max-width: 60%;
+    }
+
+    .team-description--header {
+        font-size: 36px;
+    }
+
+    .team-description hr {
+        width: 90px;
+    }
+
+    .team-description--paragraph {
+        font-size: 16px;
+    }
+
+    .watch-video {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .last-news {
+        height: 1745px;
+    }
+
+    .news-cards {
+        padding: 60px 40px;
+    }
+
+    .quote {
+        height: 450px;
+    }
+
+    .quote--flexbox {
+        padding-top: 60px;
+    }
+
+    .quote-text {
+        max-width: 100%;
+    }
+
+    .footer--flexbox {
+        gap: 25px;
+    }
+
+    .footer--flexbox > p {
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .footer-navigation {
+        flex-wrap: wrap;
+    }
+
+    .footer-nav-flex-column {
+        width: 50%;
+    }
 }
 
 /* PORTRAIT */
 @media (max-width: 640px) {
+
+    .top-emblem {
+        left: 53px;
+    }
+
+    .menu-button {
+        right: 30px;
+    }
+
+    .preview {
+        height: 386px;
+    }
+
+    .preview--flexbox {
+        padding-top: 40px;
+    }
+
     .preview--paragraph {
         display: none;
     }
@@ -130,6 +271,7 @@
     .preview--line {
         display: block;
     }
+
 }
 
 /* MOBILE PORTRAIT */

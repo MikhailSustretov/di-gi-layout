@@ -48,7 +48,7 @@ hr {
 }
 
 .container--padding {
-    padding: 0 150px;
+    padding: 0 100px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -78,6 +78,7 @@ header {
     width: 40px;
     right: 135px;
     top: 30px;
+    box-sizing: border-box;
     cursor: pointer;
     background-image: url("/images/menu-button.svg");
     background-size: cover;
@@ -333,15 +334,23 @@ header {
 
 .service-card-title {
     text-transform: uppercase;
+    color: var(--brown-color);
+    font-size: 16px;
 }
 
 .service-card-hidden {
     position: absolute;
     bottom: 10px;
     width: 80%;
+    font-size: 16px;
 
     transition: opacity 0.5s ease;
     opacity: 0;
+}
+
+.service-card-hidden a {
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .service-card-hidden p {
@@ -406,11 +415,13 @@ header {
 }
 
 .project-image-wrapper {
+    width: 19vw;
+    max-width: 270px;
     position: relative;
 }
 
 .project-image {
-    width: 270px;
+    width: 100%;
     height: auto;
 }
 
@@ -465,7 +476,14 @@ header {
     gap: 10%;
     padding: 80px 0;
 
+    position: relative;
+
     box-sizing: border-box;
+}
+
+.team-image {
+    width: 32vw;
+    height: auto;
 }
 
 .team-description {
@@ -473,7 +491,7 @@ header {
     color: #9B9B9B;
 }
 
-.team-description h2 {
+.team-description--header {
     margin: 0 0 15px 0;
     font-size: 48px;
 
@@ -481,7 +499,7 @@ header {
     color: var(--brown-color);
 }
 
-.team-description p {
+.team-description--paragraph {
     line-height: 24px;
     font-size: 18px;
     padding: 7% 0;
@@ -489,9 +507,20 @@ header {
     font-family: var(--roboto-font);
 }
 
-.team-description button {
+.watch-video {
     margin-top: auto;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.watch-video {
+    cursor: pointer;
+    background-color: var(--main-color);
+    font-family: var(--roboto-font);
+    color: white;
+    width: 230px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .last-news {
@@ -512,14 +541,15 @@ header {
 }
 
 .news-cards {
-    columns: 270px;
+    columns: 250px;
     padding-top: 100px;
 }
 
 .inner-news-card {
     position: relative;
     margin-bottom: 30px;
-    width: 270px;
+    width: 250px;
+    font-size: 16px;
 }
 
 .inner-news-card:hover::before {
@@ -629,6 +659,7 @@ header {
 
 .quote-text span {
     color: var(--main-color);
+    font-weight: 500;
 }
 
 .quote-source {
@@ -729,15 +760,16 @@ footer {
 }
 
 .footer-nav-flex-column h4 {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-size: 16px;
     font-weight: 500;
 
     font-family: var(--roboto-condensed-font);
 }
 
-.footer-navigation p, a {
-    font-size: 20px;
+.footer-navigation p,
+.footer-link {
+    font-size: 12px;
     font-weight: 300;
     color: inherit;
     text-decoration: none;
@@ -764,10 +796,10 @@ footer {
 
     font-family: var(--roboto-condensed-font);
     color: var(--brown-color);
+    font-size: 16px;
 }
 
 .up-block a {
-
     cursor: pointer;
 
     background: url("/images/up.png") no-repeat center;
