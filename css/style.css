@@ -79,7 +79,7 @@ header {
     top: 30px;
     box-sizing: border-box;
     cursor: pointer;
-    background-image: url("images/menu-button.svg");
+    background-image: url("../images/menu-button.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@ header {
     height: 100%;
     max-height: 668px;
     width: auto;
-    background-image: url("images/bg-img.jpg");
+    background-image: url("../images/bg-img.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -211,12 +211,12 @@ header {
 }
 
 .left-arrow {
-    background-image: url("images/left.png");
+    background-image: url("../images/left.png");
     background-color: var(--main-color);
 }
 
 .arrows .right-arrow {
-    background-image: url("images/right.png");
+    background-image: url("../images/right.png");
 }
 
 .call-us {
@@ -432,7 +432,7 @@ header {
     width: 90%;
     height: 90%;
 
-    background-image: url("images/info-bg.png");
+    background-image: url("../images/info-bg.png");
     border-radius: 10px;
 
     transform: translate(-50%, -50%);
@@ -458,11 +458,11 @@ header {
 }
 
 .search {
-    background-image: url("images/search-button.png");
+    background-image: url("../images/search-button.png");
 }
 
 .info {
-    background-image: url("images/info-button.png");
+    background-image: url("../images/info-button.png");
 }
 
 .team-section {
@@ -622,7 +622,7 @@ header {
     height: 28px;
     background-color: transparent; /* Прозрачный фон */
     border: none; /* Без границы */
-    background-image: url("images/white-info-button.png");
+    background-image: url("../images/white-info-button.png");
     cursor: pointer;
 
     transition: opacity 0.3s ease; /* Плавное появление кнопки */
@@ -728,19 +728,19 @@ footer {
 }
 
 .facebook {
-    background-image: url("images/networks-buttons/facebook.png");
+    background-image: url("../images/networks-buttons/facebook.png");
 }
 
 .google {
-    background-image: url("images/networks-buttons/google.png");
+    background-image: url("../images/networks-buttons/google.png");
 }
 
 .twitter {
-    background-image: url("images/networks-buttons/twitter.png");
+    background-image: url("../images/networks-buttons/twitter.png");
 }
 
 .pinterest {
-    background-image: url("images/networks-buttons/pinterest.png");
+    background-image: url("../images/networks-buttons/pinterest.png");
 }
 
 .footer-navigation {
@@ -802,7 +802,7 @@ footer {
 .up-block a {
     cursor: pointer;
 
-    background: url("images/up.png") no-repeat center;
+    background: url("../images/up.png") no-repeat center;
     border: none;
     width: 30px;
 }
