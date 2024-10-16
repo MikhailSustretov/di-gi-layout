@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta property="og:title" content="Это пример моего свёрстанного сайта" />
+    <meta property="og:description" content="Этот сайт представляет собой демонстрацию моих навыков вёрстки" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:type" content="website" />
+    <title>Демонстрация навыков вёрстки</title>
+    <link rel="icon" href="images/emblem.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -32,7 +37,7 @@
             <button class="arrow left-arrow"></button>
             <button class="arrow right-arrow"></button>
         </div>
-        <div class="pagination-dots">
+        <div class="pagination-dots top-pagination-dots--margin">
             <button class="pagination-dot top-pagination-dot"></button>
             <button class="pagination-dot top-pagination-dot active-transparent"></button>
             <button class="pagination-dot top-pagination-dot"></button>
@@ -53,7 +58,7 @@
     <div class="container service--flexbox">
         <div class="service-description">
             <h2>Сервіс</h2>
-            <p class="main-description">Від ідеї до незабутнього та вимірюваного результату</p>
+            <p class="service--main-description">Від ідеї до незабутнього та вимірюваного результату</p>
             <hr>
             <p class="service-sub-description">Інтеграція бездоганного виробництва, передових технологій та
                 ретельного вимірювання продуктивності</p>
@@ -145,7 +150,7 @@
 <section class="projects" id="projects">
     <div class="container container--padding">
         <div class="flex-projects">
-            <h2>наші проєкти</h2>
+            <h2 class="flex-projects--header">наші проєкти</h2>
             <hr>
             <div class="project-cards">
                 <div class="project-card">
@@ -157,7 +162,7 @@
                             <a class="project-btn search" href="#"></a>
                         </div>
                     </div>
-                    <p>Lalique бутик</p>
+                    <p class="project-card--title">Lalique бутик</p>
                 </div>
                 <div class="project-card">
                     <div class="project-image-wrapper">
@@ -168,7 +173,7 @@
                             <a class="project-btn search" href="#"></a>
                         </div>
                     </div>
-                    <p>Будівництво домів</p>
+                    <p class="project-card--title">Будівництво домів</p>
                 </div>
                 <div class="project-card">
                     <div class="project-image-wrapper">
@@ -179,7 +184,7 @@
                             <a class="project-btn search" href="#"></a>
                         </div>
                     </div>
-                    <p>Кавʼярня</p>
+                    <p class="project-card--title">Кавʼярня</p>
                 </div>
                 <div class="project-card">
                     <div class="project-image-wrapper">
@@ -190,7 +195,7 @@
                             <a class="project-btn search" href="#"></a>
                         </div>
                     </div>
-                    <p>Унікальні тури</p>
+                    <p class="project-card--title">Унікальні тури</p>
                 </div>
             </div>
         </div>
@@ -284,7 +289,7 @@
             то <span>діджитал-маркетинг</span> є найбільш влучним
         </blockquote>
         <cite class="quote-source">- Маргарита Акулич</cite>
-        <div class="pagination-dots">
+        <div class="pagination-dots footer-pagination-dots-margin">
             <button class="pagination-dot bottom-pagination-dot"></button>
             <button class="pagination-dot bottom-pagination-dot active-transparent"></button>
             <button class="pagination-dot bottom-pagination-dot"></button>

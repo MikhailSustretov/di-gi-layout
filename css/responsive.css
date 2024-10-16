@@ -88,6 +88,22 @@
         max-width: 318px;
     }
 
+    .project-card--title {
+        font-size: 16px;
+    }
+
+    .team-section {
+        height: 540px;
+    }
+
+    .team-description {
+        max-width: 50%;
+    }
+
+    .team-description--paragraph {
+        padding: 20px 0;
+    }
+
     .team-image {
         width: 40vw;
         height: auto;
@@ -185,6 +201,23 @@
         margin: 16px auto;
     }
 
+    .project-card--title {
+        font-size: 20px;
+    }
+
+    .team-section {
+        height: 480px;
+    }
+
+    .team {
+        padding: 50px 0;
+    }
+
+    .team-image {
+        width: 31vw;
+        height: auto;
+    }
+
     .team-description {
         max-width: 60%;
     }
@@ -199,6 +232,7 @@
 
     .team-description--paragraph {
         font-size: 16px;
+        padding: 30px 0;
     }
 
     .watch-video {
@@ -248,6 +282,10 @@
 /* PORTRAIT */
 @media (max-width: 640px) {
 
+    hr {
+        margin: 0 auto;
+    }
+
     .top-emblem {
         left: 53px;
     }
@@ -264,14 +302,110 @@
         padding-top: 40px;
     }
 
+    .preview--flexbox h1 {
+        max-width: 50%;
+    }
+
     .preview--paragraph {
         display: none;
     }
 
     .preview--line {
         display: block;
+        margin: 0 0 24px 0;
     }
 
+    .call-us {
+        height: 255px;
+    }
+
+    .call-us--flexbox {
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+    .call-us-text {
+        width: 80%;
+        padding-top: 16px;
+    }
+
+    .call-us-text p {
+        padding-bottom: 20px;
+    }
+
+    .service {
+        height: 1551px;
+    }
+
+    .service-description {
+        text-align: center;
+    }
+
+    .projects {
+        height: 2300px;
+    }
+
+    .project-image-wrapper {
+        width: 81vw;
+        max-width: 520px;
+    }
+
+    .project-btn {
+        width: 54px;
+        height: 54px;
+    }
+
+    .flex-projects--header {
+        margin: 30px 0 20px 0;
+    }
+
+    .project-cards {
+        padding: 40px;
+        gap: 0;
+    }
+
+    .project-card {
+        margin-bottom: 0;
+    }
+
+    .team-section {
+        height: 1007px;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0;
+
+        text-align: center;
+    }
+
+    .team-image {
+        width: 81vw;
+        height: auto;
+    }
+
+    .team-description {
+        max-width: 80%;
+    }
+
+    .team-description--paragraph {
+        padding-bottom: 60px;
+    }
+
+    .news-cards {
+        padding: 60px 0;
+    }
+
+    .quote-text {
+        max-width: 70%;
+    }
+
+    .footer--flexbox > p {
+        font-size: 24px;
+    }
 }
 
 /* MOBILE PORTRAIT */
@@ -280,7 +414,212 @@
         font-size: 5px;
     }
 
+    .top-emblem {
+        left: 25px;
+    }
+
+    .menu-button {
+        right: 20px;
+    }
+
+    .preview {
+        height: 193px;
+    }
+
+    .preview--flexbox {
+        padding-top: 30px;
+    }
+
+    .preview--flexbox h1 {
+        font-size: 28px;
+    }
+
+    .preview--line {
+        margin-top: 20px;
+    }
+
+    .arrows {
+        display: none;
+    }
+
     .details {
         display: none;
+    }
+
+    .top-pagination-dots--margin {
+        margin-bottom: 30px;
+    }
+
+    .pagination-dot {
+        width: 10px;
+        height: 10px;
+
+        padding: 0;
+    }
+
+    .call-us {
+        height: 300px;
+    }
+
+    .call-us--flexbox {
+        padding: 0 10px;
+    }
+
+    .call-us-text {
+        width: 80%;
+    }
+
+    .service {
+        height: 2800px;
+    }
+
+    .service-description {
+        padding: 30px 20px;
+    }
+
+    .service-description h2 {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .service--main-description {
+        font-size: 20px;
+    }
+
+    .service-sub-description {
+        font-size: 15px;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-card-hidden {
+        width: 80%;
+    }
+
+    .service-card-hidden p {
+        font-family: "Dosis", sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .projects {
+        height: 1400px;
+    }
+
+    .flex-projects--header {
+        font-size: 24px;
+    }
+
+    .flex-projects hr {
+        width: 50px;
+    }
+
+    .project-card--title {
+        font-size: 16px;
+    }
+
+    .project-btn {
+        width: 29px;
+        height: 29px;
+    }
+
+    .team {
+        height: 844px;
+    }
+
+    .team-image {
+        width: 280px;
+        height: 250px;
+    }
+
+    .team-description {
+        max-width: 100%;
+    }
+
+    .team-description--header {
+        font-size: 24px;
+        margin: 0 0 30px 0;
+    }
+
+    .team hr {
+        width: 45px;
+        margin-bottom: 40px;
+    }
+
+    .last-news {
+        height: 2900px;
+    }
+
+    .last-news h2 {
+        font-size: 24px;
+    }
+
+    .last-news hr {
+        width: 50px;
+    }
+
+    .quote-text {
+        max-width: 100%;
+        font-size: 24px;
+        margin: 45px 0;
+    }
+
+    footer {
+        height: 1000px;
+    }
+
+    .footer--flexbox {
+        padding: 90px 0;
+    }
+
+    .footer--flexbox > p {
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .networks-btns {
+        height: 144px;
+        flex-direction: column;
+    }
+
+    .networks-btn {
+        border: none;
+    }
+
+    .footer-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav-flex-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-pagination-dots-margin {
+        margin-bottom: 70px;
+    }
+
+    .up {
+        height: 141px;
+    }
+
+    .up-block {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        margin-right: 0;
+    }
+
+    .up-block p {
+        letter-spacing: 1px;
+    }
+
+    .up-block a {
+        height: 30px;
     }
 }
